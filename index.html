@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Karan Kumar Soni — B.Tech CSE student, aspiring Data Scientist, and developer." />
+  <title>Karan Kumar Soni | Personal Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<!-- <body class="onboarding-required"> -->
+  <body> 
+<!-- <button
+  id="logoutBtn"
+  type="button"
+  style="
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 999999;
+    display: block;
+    padding: 12px 20px;
+    background: #2563eb;
+    color: white;
+    border: 2px solid white;
+    border-radius: 10px;
+    cursor: pointer;
+  "
+>
+  ↪ Logout
+</button> -->
+  
+<!-- Visitor Welcome and Registration Screen -->
+<div class="welcome-gate" id="welcomeGate">
+  <div class="welcome-card welcome-fullscreen">
+
+    <img
+      class="welcome-animation"
+      src="assets/welcome-3d.png"
+      alt="Turn Ideas Into Apps — Android Developer Portfolio"
+    />
+
+    <!-- Image ke Enter Portfolio button par clickable area -->
+    <button
+  type="button"
+  class="welcome-hotspot"
+  id="enterPortfolio"
+  aria-label="Enter Portfolio"
+></button>
+
+  </div>
+</div>
+
+<!-- Visitor Details Form -->
+<!-- <div class="visitor-gate" id="visitorGate" hidden>
+  <form class="visitor-card" id="visitorForm">
+    <p class="welcome-label">ONE QUICK STEP</p>
+    <h2>Before You <span>Explore</span></h2>
+    <p class="welcome-description">
+      Please share your details to continue to my portfolio.
+    </p>
+
+    <label for="visitorName">Full Name</label>
+    <input
+      type="text"
+      id="visitorName"
+      name="name"
+      placeholder="Enter your full name"
+      autocomplete="name"
+      required
+    />
+
+    <label for="visitorEmail">Email Address</label>
+    <input
+      type="email"
+      id="visitorEmail"
+      name="email"
+      placeholder="you@example.com"
+      autocomplete="email"
+      required
+    />
+
+
+
+<div class="phone-input-group">
+  <div class="country-picker">
+    <img
+  id="countryFlag"
+  class="country-flag"
+  src="https://flagcdn.com/w40/in.png"
+  alt="India flag"
+/>
+    
+<select id="countryCode" name="country_code" aria-label="Country code" required>
+  <option value="+91" data-flag-code="in" selected>+91 India</option>
+  <option value="+1" data-flag-code="us">+1 USA</option>
+  <option value="+1" data-flag-code="ca">+1 Canada</option>
+  <option value="+44" data-flag-code="gb">+44 UK</option>
+  <option value="+61" data-flag-code="au">+61 Australia</option>
+  <option value="+971" data-flag-code="ae">+971 UAE</option>
+  <option value="+977" data-flag-code="np">+977 Nepal</option>
+  <option value="+880" data-flag-code="bd">+880 Bangladesh</option>
+  <option value="+94" data-flag-code="lk">+94 Sri Lanka</option>
+  <option value="+49" data-flag-code="de">+49 Germany</option>
+  <option value="+33" data-flag-code="fr">+33 France</option>
+  <option value="+81" data-flag-code="jp">+81 Japan</option>
+</select>
+
+  </div>
+
+  <input
+    type="tel"
+    id="visitorPhone"
+    name="phone"
+    placeholder="10-digit number"
+    inputmode="numeric"
+    autocomplete="tel-national"
+    pattern="[0-9]{10}"
+    maxlength="10"
+    minlength="10"
+    required
+  />
+</div>
+
+
+
+    <label class="visitor-consent">
+      <input type="checkbox" id="visitorConsent" required />
+      <span>I agree to share these details so the portfolio owner can receive my enquiry information.</span>
+    </label>
+
+    <button type="submit" class="welcome-button" id="visitorSubmit">
+      Submit &amp; Explore <span>→</span>
+    </button>
+
+    <p class="visitor-feedback" id="visitorFeedback" role="status"></p>
+    <button type="button" class="visitor-back" id="backToWelcome">
+      ← Back
+    </button>
+  </form> -->
+<!-- </div> -->
+
+  <div class="ambient ambient-one"></div>
+  <div class="ambient ambient-two"></div>
+  <header class="site-header">
+    <nav class="nav container" aria-label="Main navigation">
+      <!-- <a class="brand" href="#home" aria-label="Karan Kumar Soni home"><span class="brand-mark">K</span><span>Er. <span class="brand-accent">Karan.</span></span></a> -->
+       <a class="brand" href="#home">
+  <img src="assets/logo.png" alt="Karan Kumar Soni Logo" class="brand-logo">
+</a>
+      <button class="menu-toggle" id="menuToggle" aria-label="Open navigation menu" aria-expanded="false"><span></span><span></span><span></span></button>
+      <div class="nav-links" id="navLinks">
+        <a href="#home" class="nav-link active">Home</a>
+        <a href="#about" class="nav-link">About</a>
+        <a href="#skills" class="nav-link">Skills</a>
+        <a href="#journey" class="nav-link">Journey</a>
+        <a href="#projects" class="nav-link">Projects</a>
+        <a href="#contact" class="nav-link">Contact</a>
+        <a id="downloadResumeBtn" class="button button-outline" href="resume.txt" download>
+  Download Resume ↗
+</a>
+        <!-- <button id="logoutBtn" class="logout-btn" type="button">
+  ↪ Logout
+</button> -->
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero section container page-section active-page" id="home">
+      <div class="hero-copy reveal">
+        <div class="eyebrow"><span class="status-dot"></span> <b>WELCOME TO THE PORTFOLIO OF </b><span class="gradient-text"><i>KARAN</i></span> </div>
+        <p class="hello">Hello, I'm</p>
+        <h1>Karan Kumar <span class="gradient-text">Soni</span></h1>
+        <h2>B.Tech CSE Student <span class="muted">|</span> Aspiring Android Developer </h2>
+        <p class="hero-description">I’m passionate about building modern,
+          user-friendly Android applications.
+          Currently, I’m learning Kotlin and Jetpack Compose while developing my skills through hands-on projects.
+          I enjoy solving problems, exploring new technologies, 
+          and turning creative ideas into practical mobile experiences.</p>
+        <div class="hero-actions">
+          <button class="button button-primary" id="exploreWorkBtn" type="button">
+            <span class="button-text">Explore My Work</span>
+            <span class="button-icon">↗</span>
+            <span class="button-spinner"></span>
+          </button>
+          <a class="button button-outline" href="#contact">Let's Connect</a>
+        </div>
+        <div class="social-row" aria-label="Social media links">
+          <a class="social-link" 
+          href="#contact" 
+          aria-label="www.linkedin.com/in/karan-kumar-soni-814406251" 
+          title="Add your LinkedIn URL">in</a>
+
+
+          <a class="social-link github-mark" 
+          href="#contact" 
+          aria-label="GitHub link placeholder" 
+          title="Add your GitHub URL">GH</a>
+
+
+          <a class="social-link" 
+          href="#contact" 
+          aria-label="Instagram link placeholder" title="Add your Instagram URL">◎</a>
+          <!-- <span class="social-hint">Social links can be added in <code>script.js</code></span> -->
+        </div>
+      </div>
+      <div class="hero-visual reveal">
+        <div class="orbit orbit-large"></div>
+        <div class="orbit orbit-small"></div>
+
+        <div class="portrait-frame">
+          <img id="profilePhoto" src="assets/profile-photo.jpg" alt="Karan Kumar Soni profile portrait" 
+          onerror="this.style.display='none'; document.getElementById('photoFallback').style.display='grid';" />
+          <div id="photoFallback" class="photo-fallback">
+            <span>KK</span><small>Add your photo</small><small>assets/profile-photo.jpg</small></div>
+        </div>
+
+
+        <div class="floating-card floating-card-top"><span class="floating-icon">✦</span>
+          <div><strong>Curious Mind</strong><small>Always learning</small></div></div>
+        <div class="floating-card floating-card-bottom"><span class="floating-icon blue-icon">⌘</span>
+          <div><strong>Project Builder</strong><small>Learning by doing</small></div></div>
+        <div class="hero-glow"></div>
+      </div>
+
+
+      <!-- <a class="scroll-cue" href="#about"><span class="scroll-line"></span> SCROLL TO EXPLORE</a> -->
+    </section>
+
+    <section class="section container page-section" id="about">
+      <div class="section-heading reveal"><p class="section-kicker">A LITTLE ABOUT ME</p>
+        <h2>Building my path in <span class="gradient-text">technology.</span>
+        </h2><p class="section-intro">A snapshot of my background, interests, and the direction I’m working toward.</p></div>
+      <div class="about-grid">
+        <article class="panel about-story reveal">
+          <div class="panel-icon">✧</div><h3>Who I Am</h3>
+          <p>I’m Karan Kumar Soni, a Computer Science and Engineering 
+            student passionate about Android app development. 
+            I’m learning Kotlin and Jetpack Compose to build modern, responsive, and user-friendly 
+            mobile applications.I enjoy solving problems, exploring new technologies, 
+            and turning creative ideas into practical Android apps. My goal is to develop real-world projects, 
+            continuously improve my coding skills, and grow as an Android Developer.</p>
+          <div class="interest-tags"><span>Kotlin</span><span>Jetpack Compose</span><span>Web Development</span></div>
+        </article>
+
+
+        <article class="panel biodata reveal">
+          <div class="panel-topline"><h3>Quick Profile</h3>
+            <!-- <span class="mini-label">PERSONAL DETAILS</span> -->
+          </div>
+          <div class="detail-list">
+            <div class="detail-item"><span class="detail-icon">⌁</span>
+              <div><small>Full Name</small><strong>Karan Kumar Soni</strong>
+              </div></div>
+
+            <div class="detail-item"><span class="detail-icon">⌂</span>
+              <div><small>Education</small><strong>B.Tech — Computer Science & Engineering</strong>
+              </div></div>
+
+            <div class="detail-item"><span class="detail-icon">◷</span>
+              <div><small>Expected Graduation</small><strong>2027</strong>
+              </div></div>
+
+            <div class="detail-item"><span class="detail-icon">⌘</span>
+              <div><small>Primary Interest</small><strong>Android Development</strong>
+              </div></div>
+
+            <div class="detail-item"><span class="detail-icon">✉</span>
+              <div><small>Email</small><strong><a class="contact-link" href="mailto:er.karankumarsoni@gmail.com">
+                      er.karankumarsoni@gmail.com
+                    </a>
+                  </strong></strong>
+              </div></div>
+
+            <div class="detail-item"><span class="detail-icon">◎</span>
+              <div><small>Phone</small><strong><a class="contact-link" href="tel:+918873741735">+91 8873741735</a></strong>
+              </div></div>
+
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section container page-section" id="skills">
+      <div class="section-heading reveal"><p class="section-kicker">WHAT I WORK WITH</p><h2>Skills & <span class="gradient-text">toolkit.</span></h2><p class="section-intro">Technologies I’ve studied or used in coursework and personal projects.</p></div>
+      <div class="skills-grid">
+        <article class="skill-card reveal"><div class="skill-card-heading">
+          <span class="skill-symbol">Kt</span><div><h3>Programming</h3>
+            <p>Core coding & data handling</p></div></div><div class="skill-chips">
+            <span>Kotlin</span><span>Jetpack Compose</span><span>Python</span><span>SQL</span>
+          </div></article>
+
+        <article class="skill-card reveal"><div class="skill-card-heading">
+          <span class="skill-symbol orange">⌘</span><div><h3>Web Development</h3>
+            <p>Building responsive interfaces</p></div></div><div class="skill-chips">
+              <span>HTML</span><span>CSS</span><span>JavaScript</span></div></article>
+
+        <article class="skill-card reveal"><div class="skill-card-heading">
+          <span class="skill-symbol purple">▥</span><div><h3>Data Science</h3>
+            <p>Analysis & exploration</p></div></div><div class="skill-chips">
+              <span>Pandas</span><span>NumPy</span><span>Machine Learning</span></div></article>
+
+        <article class="skill-card reveal"><div class="skill-card-heading">
+          <span class="skill-symbol green">◫</span><div><h3>Tools & Visualization</h3>
+            <p>Insights that are easy to read</p></div></div><div class="skill-chips">
+              <span>Streamlit</span><span>Plotly</span><span>Excel</span><span>GitHub</span></div></article>
+      </div>
+      <!-- <p class="small-note">Tip: Update the skill list to match your current proficiency before sharing this portfolio with recruiters.</p> -->
+    </section>
+
+    <section class="section container page-section" id="journey">
+      <div class="section-heading reveal"><p class="section-kicker">MY BACKGROUND</p>
+        <h2>Education & <span class="gradient-text">journey.</span></h2>
+        <p class="section-intro">A simple timeline of my academic path and learning goals.</p></div>
+
+      <div class="timeline panel reveal">
+        <div class="timeline-item"><div class="timeline-marker"></div>
+        <div class="timeline-date">2023 — 2027 (Expected)</div><div class="timeline-content">
+          <span class="timeline-tag">CURRENT</span><h3>B.Tech — Computer Science & Engineering</h3>
+          <p>Dr. A.P.J Abdul Kalam Technical University</p>
+          <small>Focus areas: programming, data analysis, software development, and emerging technologies.</small>
+        </div></div>
+
+        <div class="timeline-item"><div class="timeline-marker"></div>
+        <div class="timeline-date">Academic Foundation</div><div class="timeline-content">
+          <h3>School Education</h3><p>Building the foundation for higher studies in computer science.</p>
+          <small>Add your school names, board, and passing years here when ready.</small></div></div>
+
+        <div class="timeline-item"><div class="timeline-marker"></div>
+        <div class="timeline-date">Ongoing</div><div class="timeline-content">
+          <h3>Self-Learning & Projects</h3><p>Practising Python, SQL, analytics, and 
+            web development through hands-on work.</p>
+            <small>Goal: keep learning, build useful projects, and gain internship experience.</small></div></div>
+
+      </div>
+    </section>
+
+    <section class="section container page-section" id="projects">
+      <div class="section-heading section-heading-row reveal"><div>
+        <p class="section-kicker">SELECTED WORK</p><h2>Projects I’m 
+          <span class="gradient-text">building.</span></h2>
+          <p class="section-intro">Practical projects that demonstrate data analysis and dashboard design.</p>
+        </div><span class="project-count">02 PROJECTS</span></div>
+
+      <div class="projects-grid">
+        <article class="project-card reveal clickable-project"
+         data-project-url="https://iamkaran1735.github.io/Supply-Chain-Analytics-Dashboard/"
+         tabindex="0"
+         role="link"
+         aria-label="Open Supply Chain Analytics Dashboard">
+         <div class="project-visual supply-visual">
+          <div class="mock-window"><div class="mock-toolbar"><i></i><i></i><i></i>
+            <span>Supply Chain Dashboard</span></div>
+            <div class="mock-kpis"><b></b><b></b><b></b></div>
+            <div class="mock-charts"><div class="mock-bars"><i></i><i></i><i></i><i></i><i></i><i></i></div>
+            <div class="mock-donut"></div></div></div>
+            <span class="project-number">01</span></div>
+            <div class="project-body"><div class="project-meta"><span>DATA ANALYTICS</span>
+              <span>2026</span></div><h3><span>📦 Supply Chain Dashboard</span></h3>
+              <p>An interactive dashboard concept for exploring shipping performance, delivery gaps, 
+                shipping modes, and order regions using data visualizations.</p>
+                <div class="project-tags"><span>Python</span><span>Pandas</span>
+                  <span>Streamlit</span><span>Plotly</span></div>
+                  <a class="text-link" href="#contact">Ask me about this project <span>↗</span></a></div></article>
+
+        <article class="project-card reveal clickable-project"
+         data-project-url="https://coffee-dashboard-karan.streamlit.app/"
+         tabindex="0"
+         role="link"
+         aria-label="Open Coffee Product Optimization Dashboard"><div class="project-visual coffee-visual">
+          <div class="mock-window"><div class="mock-toolbar"><i></i><i></i><i></i>
+            <span>Coffee Revenue Dashboard</span></div><div class="coffee-top">
+              <div class="coffee-kpi"></div><div class="coffee-kpi"></div><div class="coffee-kpi">
+              </div></div><div class="coffee-chart"><div class="coffee-line"></div>
+              <div class="coffee-bars"><i></i><i></i><i></i><i></i><i></i></div></div></div>
+              <span class="project-number">02</span></div><div class="project-body">
+                <div class="project-meta"><span>BUSINESS INTELLIGENCE</span><span>2026</span>
+                </div><h3>☕ Coffee Revenue Dashboard</h3>
+                <p>A dashboard for examining sales, product categories, store contribution, 
+                  hourly patterns, and top-selling products.</p><div class="project-tags">
+                    <span>Python</span><span>Pandas</span><span>Streamlit</span><span>Excel</span></div>
+                    <a class="text-link" href="#contact">Ask me about this project <span>↗</span></a></div></article>
+
+          
+<!-- Project 3: Car Price Prediction -->
+<article class="project-card reveal clickable-project"
+         data-project-url="https://car-price-prediction-karan.streamlit.app/"
+         tabindex="0"
+         role="link"
+         aria-label="Open Car Price Prediction">
+
+  <div class="project-visual supply-visual">
+    <div class="mock-window">
+      <div class="mock-toolbar">
+        <i></i><i></i><i></i>
+        <span>Car Price Prediction</span>
+      </div>
+      <div class="mock-kpis"><b></b><b></b><b></b></div>
+      <div class="mock-charts">
+        <div class="mock-bars"><i></i><i></i><i></i><i></i><i></i></div>
+        <div class="mock-donut"></div>
+      </div>
+    </div>
+    <span class="project-number">03</span>
+  </div>
+
+  <div class="project-body">
+    <div class="project-meta">
+      <span>MACHINE LEARNING</span><span>2026</span>
+    </div>
+    <h3>🚗 Car Price Prediction</h3>
+    <p>A machine learning application that predicts car prices based on the model's input features.</p>
+    <div class="project-tags">
+      <span>Python</span><span>Machine Learning</span><span>Streamlit</span>
+    </div>
+    <a class="text-link" href="#contact">
+      Ask me about this project <span>↗</span>
+    </a>
+  </div>
+</article>
+
+<!-- Project 4: Iris Flower Classification -->
+<article class="project-card reveal clickable-project"
+         data-project-url="https://iris-flower-classification-dashboard.streamlit.app/"
+         tabindex="0"
+         role="link"
+         aria-label="Open Iris Flower Classification">
+
+  <div class="project-visual coffee-visual">
+    <div class="mock-window">
+      <div class="mock-toolbar">
+        <i></i><i></i><i></i>
+        <span>Iris Flower Classification</span>
+      </div>
+      <div class="mock-kpis"><b></b><b></b><b></b></div>
+      <div class="mock-charts">
+        <div class="mock-bars"><i></i><i></i><i></i><i></i><i></i></div>
+        <div class="mock-donut"></div>
+      </div>
+    </div>
+    <span class="project-number">04</span>
+  </div>
+
+  <div class="project-body">
+    <div class="project-meta">
+      <span>MACHINE LEARNING</span><span>2026</span>
+    </div>
+    <h3>🌸 Iris Flower Classification</h3>
+    <p>A machine learning dashboard for classifying iris flowers using their measurements.</p>
+    <div class="project-tags">
+      <span>Python</span><span>Scikit-learn</span><span>Streamlit</span>
+    </div>
+    <a class="text-link" href="#contact">
+      Ask me about this project <span>↗</span>
+    </a>
+  </div>
+</article>
+
+<!-- Project 5: SaharaNet - Upcoming -->
+<!-- <article class="project-card reveal">
+  <div class="project-visual supply-visual">
+    <div class="mock-window">
+      <div class="mock-toolbar">
+        <i></i><i></i><i></i>
+        <span>SaharaNet Volunteer Platform</span>
+      </div>
+      <div class="mock-kpis"><b></b><b></b><b></b></div>
+      <div class="mock-charts">
+        <div class="mock-bars"><i></i><i></i><i></i><i></i><i></i></div>
+        <div class="mock-donut"></div>
+      </div>
+    </div>
+    <span class="project-number">05</span>
+  </div>
+
+  <div class="project-body">
+    <div class="project-meta">
+      <span>WEB DEVELOPMENT · AI CONCEPT</span>
+      <span>IN PROGRESS</span>
+    </div>
+    <h3>SaharaNet — Community Volunteer Platform</h3>
+    <p>A platform concept to connect people in need with volunteers through intelligent matching.</p>
+    <div class="project-tags">
+      <span>React.js</span><span>Node.js</span><span>Express</span>
+    </div>
+    <a class="text-link" href="#contact">
+      Ask me about this project <span>↗</span>
+    </a>
+  </div>
+</article> -->
+      </div>
+      <p class="small-note">Project visuals are illustrative. 
+        Add your actual screenshots and repository/demo URLs before publishing.</p>
+    </section>
+
+    <section class="section container projects-highlight" id="highlights">
+      <div class="highlight-banner reveal"><div><p class="section-kicker">WHAT’S NEXT</p>
+        <h2>Curious, consistent, <span class="gradient-text">always growing.</span></h2>
+        <p>I’m looking for opportunities to learn from experienced teams, contribute to real projects, 
+          and keep improving my technical and communication skills.</p></div>
+          <a class="button button-primary" href="#contact">Get in Touch ↗</a></div>
+    </section>
+
+    <section class="section container page-section" id="contact">
+      <div class="section-heading reveal"><p class="section-kicker">LET’S CONNECT</p>
+        <h2>Have a project or <span class="gradient-text">opportunity?</span></h2>
+        <p class="section-intro">Send a message about collaboration, or my projects.</p></div>
+
+      <div class="contact-grid">
+        <div class="contact-copy panel reveal"><h3>Contact details</h3>
+          <p>To protect privacy, my phone number is not displayed publicly. 
+            Use the form or add a professional email address below.</p>
+            <div class="contact-detail">
+              <span class="contact-icon">✉</span><div><small>Email</small>
+                <strong class="placeholder-value">
+                  <strong>
+                    <a class="contact-link" href="mailto:er.karankumarsoni@gmail.com">
+                      er.karankumarsoni@gmail.com
+                    </a>
+                  </strong>
+                  </strong></div></div>
+                <div class="contact-detail">
+                  
+                  <span class="contact-icon">⌖</span><div>
+                    <small>Location</small><strong>Uttar Pradesh, India</strong></div></div>
+                    <div class="contact-detail">
+
+                    <div class="contact-detail">
+                      <span class="contact-icon">↗</span>
+                      <div>
+                        <small>Social profiles</small>
+                        <strong class="social-contact-links">
+                          <a href="#" data-social="linkedin" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                          <span>·</span>
+                          <a href="#" data-social="github" target="_blank" rel="noopener noreferrer">GitHub</a>
+                          <span>·</span>
+                          <a href="#" data-social="instagram" target="_blank" rel="noopener noreferrer">Instagram</a>
+                          <span>·</span>
+                          <!-- <a href="#" data-social="youtube" target="_blank" rel="noopener noreferrer">YouTube</a> -->
+                        </strong>
+                      </div>
+                    </div>
+                    </div></div>
+
+
+                <form
+                  class="contact-form panel reveal"
+                  id="contactForm"
+                  action="https://formspree.io/f/mjyyrqgd"
+                  method="POST"
+            >
+          <div class="form-row">
+            <label for="name">Your name<input id="name" name="name" type="text" placeholder="Enter your name" required />
+            </label><label for="email">Your email
+              <input id="email" name="email" type="email" 
+              placeholder="you@example.com" required /></label></div>
+          <label for="subject">Subject<input id="subject" name="subject" type="text" 
+            placeholder="Internship / collaboration / project" required /></label>
+
+
+          <label for="message">Message<textarea id="message" name="message" rows="5" 
+            placeholder="Write your message..." required></textarea></label>
+
+          <button class="button button-primary submit-button" type="submit">Send Email <span>↗</span></button>
+          <p class="form-note">This form opens your email app; it does not send or store messages on a server.</p>
+          <p class="form-feedback" id="formFeedback" role="status"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer"><div class="container footer-inner">
+    <a class="brand" href="#home" aria-label="Karan Kumar Soni home"><span class="brand-mark">K</span><span>Er. <span class="brand-accent">Karan.</span></span></a>
+      <p>Designed with purpose by Karan Kumar Soni</p>
+      <a href="#home" class="back-top">Back to top ↑</a><small>© <span id="year">
+
+      </span> Karan Kumar Soni. All rights reserved.</small></div></footer>
+  <script src="script.js"></script>
+
+<div id="navPageLoader">
+    <div class="nav-loader-spinner"></div>
+    <p>LOADING PAGE...</p>
+</div>
+
+</body>
+</html>

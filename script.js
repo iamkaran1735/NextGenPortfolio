@@ -359,86 +359,14 @@ document.querySelectorAll(".clickable-project").forEach((card) => {
 
 
 // Welcome screen -> visitor form -> email -> portfolio
-const FORMSPREE_ENDPOINT = "https://formspree.io/f/mjyyrqgd";
-
+// Welcome screen -> Direct Portfolio
 const welcomeGate = document.getElementById("welcomeGate");
-const visitorGate = document.getElementById("visitorGate");
 const enterPortfolioBtn = document.getElementById("enterPortfolio");
-const backToWelcomeBtn = document.getElementById("backToWelcome");
-const visitorForm = document.getElementById("visitorForm");
-const visitorSubmit = document.getElementById("visitorSubmit");
-const visitorFeedback = document.getElementById("visitorFeedback");
 
 enterPortfolioBtn?.addEventListener("click", () => {
-  welcomeGate.hidden = true;
-  visitorGate.hidden = false;
-  document.getElementById("visitorName")?.focus();
+    welcomeGate.hidden = true;
+    showPage("home");
 });
-
-backToWelcomeBtn?.addEventListener("click", () => {
-  visitorGate.hidden = true;
-  welcomeGate.hidden = false;
-});
-
-visitorForm?.addEventListener("submit", async (event) => {
-  event.preventDefault();
-
-  if (
-    !FORMSPREE_ENDPOINT.startsWith("https://formspree.io/f/mjyyrqgd") ||
-    FORMSPREE_ENDPOINT.includes("PASTE_YOUR")
-  ) {
-    visitorFeedback.textContent =
-      "Please add your real Formspree endpoint in script.js first.";
-    return;
-  }
-
-  visitorSubmit.disabled = true;
-  visitorSubmit.textContent = "Submitting... Please wait";
-  visitorFeedback.textContent = "Submitting your details securely...";
-
-  try {
-    const response = await fetch(FORMSPREE_ENDPOINT, {
-      method: "POST",
-      body: new FormData(visitorForm),
-      headers: { Accept: "application/json" }
-    });
-
-    if (!response.ok) {
-      throw new Error("Submission failed");
-    }
-
-    visitorFeedback.textContent =
-      "Thank you! Your details were submitted successfully.";
-
-    visitorForm.reset();
-
-    setTimeout(() => {
-      visitorGate.hidden = true;
-      welcomeGate.hidden = true;
-      document.body.classList.remove("onboarding-required");
-      window.scrollTo({ top: 0, behavior: "smooth" });
-    }, 900);
-  } catch (error) {
-    visitorFeedback.textContent =
-      "Submission failed. Please check your internet and Formspree endpoint, then try again.";
-  } finally {
-    visitorSubmit.disabled = false;
-    visitorSubmit.innerHTML = 'Submit &amp; Explore <span>→</span>';
-  }
-});
-
-
-
-const visitorPhoneInput = document.getElementById("visitorPhone");
-
-visitorPhoneInput?.addEventListener("input", () => {
-  // Remove every character except digits
-  visitorPhoneInput.value = visitorPhoneInput.value
-    .replace(/[^0-9]/g, "")
-    .slice(0, 10);
-});
-
-
 
 const countryCodeSelect = document.getElementById("countryCode");
 const countryFlagDisplay = document.getElementById("countryFlag");

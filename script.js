@@ -278,9 +278,6 @@ if (pageId === "home") {
     }, 700);
 }
 
-
-
-
 // Handle navigation links
 document.querySelectorAll('a[href^="#"]').forEach((link) => {
   link.addEventListener("click", (event) => {
@@ -356,18 +353,6 @@ document.querySelectorAll(".clickable-project").forEach((card) => {
   });
 });
 
-
-
-// Welcome screen -> visitor form -> email -> portfolio
-// Welcome screen -> Direct Portfolio
-const welcomeGate = document.getElementById("welcomeGate");
-const enterPortfolioBtn = document.getElementById("enterPortfolio");
-
-enterPortfolioBtn?.addEventListener("click", () => {
-    welcomeGate.hidden = true;
-    showPage("home");
-});
-
 const countryCodeSelect = document.getElementById("countryCode");
 const countryFlagDisplay = document.getElementById("countryFlag");
 
@@ -388,85 +373,6 @@ function updateCountryFlag() {
 
 countryCodeSelect?.addEventListener("change", updateCountryFlag);
 updateCountryFlag();
-
-// Logout button functionality
-const logoutBtn = document.getElementById("logoutBtn");
-
-function updateLogoutButton() {
-  const welcomeGate = document.querySelector(".welcome-gate");
-  const visitorForm = document.querySelector(".visitor-card");
-
-  const isWelcomeVisible =
-    welcomeGate && !welcomeGate.hidden;
-
-  const isVisitorFormVisible =
-    visitorForm && !visitorForm.hidden;
-
-  const isHomePage =
-  window.location.hash === "#home" ||
-  document.body.classList.contains("home-page") ||
-  !window.location.hash;
-
-  if (logoutBtn) {
-    logoutBtn.style.display =
-      !isWelcomeVisible &&
-      !isVisitorFormVisible &&
-      !isHomePage
-        ? "inline-flex"
-        : "none";
-  }
-}
-
-// Update Logout button whenever the page changes
-function refreshLogoutButton() {
-  updateLogoutButton();
-}
-
-document.querySelectorAll('a[href^="#"]').forEach((link) => {
-  link.addEventListener("click", () => {
-    setTimeout(refreshLogoutButton, 100);
-  });
-});
-
-window.addEventListener("hashchange", refreshLogoutButton);
-window.addEventListener("load", refreshLogoutButton);
-
-refreshLogoutButton();
-
-logoutBtn?.addEventListener("click", () => {
-  const confirmed = confirm("Are you sure you want to logout?");
-
-  if (!confirmed) return;
-
-  // Remove saved visitor session, if used
-  sessionStorage.removeItem("portfolioVisited");
-  localStorage.removeItem("portfolioVisited");
-
-  // Show welcome screen
-  const welcomeGate = document.querySelector(".welcome-gate");
-
-  if (welcomeGate) {
-    welcomeGate.hidden = false;
-    welcomeGate.style.display = "grid";
-  }
-
-  // Hide the portfolio
-  document.querySelectorAll(".page-section").forEach((section) => {
-    section.classList.remove("active-page");
-  });
-
-  document.body.classList.remove("home-page", "projects-page");
-
-  // Return to the welcome UI
-  window.location.hash = "";
-  window.scrollTo({ top: 0, behavior: "smooth" });
-
-  updateLogoutButton();
-});
-
-// Update button visibility on navigation
-window.addEventListener("hashchange", updateLogoutButton);
-document.addEventListener("DOMContentLoaded", updateLogoutButton);
 
 function updateResumeButton() {
   const aboutSection = document.querySelector("#about");
